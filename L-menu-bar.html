@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* ทำให้ html และ body สูงเต็ม 100% */
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inria Serif", serif;
+            font-weight: 700;
+            font-style: normal;
+            background-color: rgb(0, 78, 127);
+            color: white; /* กำหนดสีตัวอักษรหลักเป็นสีขาว */
+            
+            /* --- นี่คือส่วนสำคัญของการจัด Layout --- */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* ให้ body สูงเต็มหน้าจอเป็นอย่างน้อย */
+            /* ------------------------------------- */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit; /* ให้ลิงก์มีสีเดียวกับตัวอักษรปกติ (สีขาว) */
+        }
+
+        /* === Header (แถบบนสุด) === */
+        header {
+            padding: 20px;
+            height: 80px; /* กำหนดความสูงที่แน่นอนให้ header */
+            border-bottom: 3px solid white; /* ใช้ border แทน .line1 */
+            display: flex;
+            align-items: center; /* จัดไอคอนให้อยู่กลางแนวตั้ง */
+        }
+
+        header i {
+            font-size: 2rem; /* ขยายไอคอน hamburger */
+        }
+
+        /* === Main (เนื้อหาตรงกลาง) === */
+        main {
+            flex-grow: 1; /* <-- คำสั่งนี้สำคัญมาก! */
+            /* มันจะสั่งให้ main ยืดตัวจนเต็มพื้นที่ว่างตรงกลางทั้งหมด */
+            
+            padding: 30px 20px; /* เพิ่มระยะห่างบนล่าง และซ้ายขวา */
+            display: flex;
+            flex-direction: column; /* จัดลิงก์ให้เรียงแนวตั้ง */
+            gap: 35px; /* เพิ่มช่องว่างระหว่างเมนู (Home, Goal, Timer) */
+        }
+
+        main a {
+            display: flex;
+            align-items: center; /* จัดไอคอนกับข้อความให้อยู่กลางแนวตั้ง */
+            gap: 25px; /* เพิ่มช่องว่างระหว่างไอคอนกับข้อความ */
+        }
+
+        main a i {
+            font-size: 1.8rem;
+            width: 30px; /* กำหนดความกว้างให้ไอคอน */
+            text-align: center; /* จัดไอคอนให้อยู่กลาง (เพื่อให้ข้อความตรงกัน) */
+        }
+
+        main a span {
+            font-size: 1.8rem;
+        }
+
+        /* === Footer (แถบล่างสุด) === */
+        footer {
+            padding: 20px;
+            height: 60px; /* กำหนดความสูงที่แน่นอนให้ footer */
+            border-top: 3px solid white; /* ใช้ border แทน .line2 */
+            display: flex;
+            justify-content: space-between; /* จัดไอคอนซ้ายสุด-ขวาสุด */
+            align-items: center;
+        }
+
+        footer i {
+            font-size: 2rem; /* ขยายไอคอนล่าง */
+        }
+    </style>
+</head>
+<body>
+<body>
+    <header>
+        <a href="./home-start.html"> <span><i class="fa-solid fa-bars"></i></span>
+        </a>
+    </header>
+
+    <main>
+        <a href="./home-start.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="./goal.html">
+            <i class="fa-solid fa-flag"></i>
+            <span>Goal</span>
+        </a>
+        <a href="./timer.html">
+            <i class="fa-solid fa-clock"></i>
+            <span>Timer</span>
+        </a>
+    </main>
+
+    <footer>
+        <a href="aboutme.html"><span><i class="fa-solid fa-circle-info"></i></span></a>
+        <a href="D-menu-bar.html"><span><i class="fa-solid fa-sun"></i></span></a>
+    </footer>
+</body>
+</body>
+</html>
